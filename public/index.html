@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="referrer" content="never">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title></title>
+    <link rel="icon" href="https://pic2.zhimg.com/v2-fb7b7d5bf36b310b690fc9100725025b_b.jpg" sizes="32x32">
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      <style>
+        .loading-img {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          margin-top: -100px;
+          margin-left: -100px;
+          width: 200px;
+          height: 200px;
+          z-index: 999;
+
+        }
+      </style>
+      <img src="./img/loading.gif" class="loading-img" alt="">
+    </div>
+
+    <% if(NODE_ENV === "production") { %>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vuex/3.6.2/vuex.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue-router/3.4.9/vue-router.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.min.js"></script>
+
+    <% } %>
+  </body>
+</html>
